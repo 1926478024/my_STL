@@ -1,7 +1,10 @@
 #include <iostream>
 #include <algorithm>
+<<<<<<< HEAD
 #include <memory>
 #include <string>
+=======
+>>>>>>> 62f5f307985791666e0ab3a54e62b3980301e1a1
 
 template <typename T>
 class Vector{
@@ -100,7 +103,12 @@ public:
             size_--;
     }
     //清空元素
+<<<<<<< HEAD
     void clear(){       
+=======
+    void clear(){
+        std::destroy(data_, data_ + size_);
+>>>>>>> 62f5f307985791666e0ab3a54e62b3980301e1a1
         size_ = 0;
     }
     //重新设置容量(和push_back中的扩容逻辑类似，但不添加元素)
@@ -116,6 +124,7 @@ public:
     }
     //缩小当前大小
     void resize(size_t new_size){
+<<<<<<< HEAD
          if(new_size > size_){
             if(new_size > capacity_)
                 reserve(new_size);
@@ -138,6 +147,17 @@ public:
         }
         new (data_ + size_) T(std::forward<Args>(args)...);
         size_++;
+=======
+        if(new_size < size_){
+            std::destroy(data_ + new_size, data_ + size_);
+            size_ = new_size;
+        } else if(new_size > size_){
+            reserve(new_size);
+            for(size_t i = size_; i < new_size; ++i)
+                data_[i] = T();
+            size_ = new_size;
+        }
+>>>>>>> 62f5f307985791666e0ab3a54e62b3980301e1a1
     }
     //迭代器支持
     using iterator = T*;
@@ -146,6 +166,7 @@ public:
     iterator end() { return data_ + size_; }
     const_iterator begin() const { return data_; }
     const_iterator end() const { return data_ + size_; }
+<<<<<<< HEAD
     //元素个数
     size_t size() const { return size_;}
     //元素容量
@@ -173,4 +194,10 @@ public:
             throw std::out_of_range("Index out of range");
         return data_[i];
     }
+=======
+    size_t size() const { return size_;}
+    size_t capacity() const { return capacity_;}
+    T& operator[](size_t i) {return data_[i];}
+    const T& operator[](size_t i) const {return data_[i];}
+>>>>>>> 62f5f307985791666e0ab3a54e62b3980301e1a1
 };
