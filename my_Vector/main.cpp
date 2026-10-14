@@ -1,4 +1,4 @@
-#include "myVector.h"
+#include "Vector.h"
 
 int main(){
     Vector<int> a;
@@ -20,7 +20,6 @@ for (const auto& x : v)
 // 方式3：auto 推导
 for (auto it = v.begin(); it != v.end(); ++it)
     std::cout << *it << " ";
-<<<<<<< HEAD
 
     Vector<std::string> v1;
     v1.push_back("hello");
@@ -43,7 +42,5 @@ for (auto it = v.begin(); it != v.end(); ++it)
     
     v.reserve(100);
     std::cout << "after reserve(100), cap=" << v.capacity() << std::endl;
-=======
->>>>>>> 62f5f307985791666e0ab3a54e62b3980301e1a1
     return 0;
 }
