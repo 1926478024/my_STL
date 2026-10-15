@@ -1,3 +1,6 @@
+#ifndef VECTOR_H
+#define VECTRE_H
+
 #include <iostream>
 #include <algorithm>
 #include <memory>
@@ -166,3 +169,4 @@ public:
         return data_[i];
     }
 };
+#endif
