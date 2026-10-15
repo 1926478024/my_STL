@@ -13,9 +13,9 @@
 │   ├── Vector.h
 │   ├── main.cpp
 │   └── Makefile
-├── Sorting/                 # 排序算法实现
+├── sorting/                 # 排序算法实现
 │   ├── README.md
-│   ├── Sort.h
+│   ├── sorting.h
 │   ├── main.cpp
 │   └── Makefile
 ├── [其他模块名]/            # 新增模块目录
@@ -29,7 +29,7 @@
 | 模块 | 说明 | 文档 |
 |------|------|------|
 | Vector | 基于模板的 C++ 动态数组实现，支持泛型编程 | [Vector/README.md](Vector/README.md) |
-| Sorting | 排序算法实现（冒泡、选择、插入、快速、归并等） | [Sorting/README.md](Sorting/README.md) |
+| sorting | 排序算法实现（冒泡、选择、插入、快速、归并等） | [sorting/README.md](sorting/README.md) |
 | [模块名] | [模块描述] | [链接](模块文件夹/README.md) |
 
 > 每新增一个模块，只需在本表的最后一行追加一行，并在项目根目录下创建对应的文件夹即可。
@@ -39,7 +39,7 @@
 每个子模块文件夹内都包含独立的 `Makefile`，进入对应目录后执行：
 
 ```bash
-cd Vector          # 进入模块目录
+cd 目标目录        # 进入模块目录
 make               # 编译
 make run           # 编译并运行
 make clean         # 清理编译产物
