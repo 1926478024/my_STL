@@ -13,9 +13,14 @@
 │   ├── Vector.h
 │   ├── main.cpp
 │   └── Makefile
-├── sorting/                 # 排序算法实现
+├── Sorting/                 # 排序算法实现
 │   ├── README.md
 │   ├── sorting.h
+│   ├── main.cpp
+│   └── Makefile
+├── Smart_ptr/                 # 三种智能指针实现
+│   ├── README.md
+│   ├── Smart_ptr.h
 │   ├── main.cpp
 │   └── Makefile
 ├── [其他模块名]/            # 新增模块目录
@@ -29,7 +34,8 @@
 | 模块 | 说明 | 文档 |
 |------|------|------|
 | Vector | 基于模板的 C++ 动态数组实现，支持泛型编程 | [Vector/README.md](Vector/README.md) |
-| sorting | 排序算法实现（冒泡、选择、插入、快速、归并等） | [sorting/README.md](sorting/README.md) |
+| sorting | 排序算法实现（冒泡、选择、插入、快速、归并等） | [Sorting/README.md](Sorting/README.md) |
+| [模块名] | [模块描述] | [Smart_ptr/README.md](Smart_ptr/README.md) |
 | [模块名] | [模块描述] | [链接](模块文件夹/README.md) |
 
 > 每新增一个模块，只需在本表的最后一行追加一行，并在项目根目录下创建对应的文件夹即可。
